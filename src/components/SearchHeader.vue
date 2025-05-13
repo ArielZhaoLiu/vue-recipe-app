@@ -17,7 +17,10 @@ export default {
     },
     methods: {
         search() {
-            //console.log(this.searchTerm)
+            if (this.searchTerm.trim() === ''){
+                alert('Please enter a food keyword to search')
+                return
+            }
             this.$emit('search', this.searchTerm)
         }
     }
