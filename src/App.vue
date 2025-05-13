@@ -1,19 +1,15 @@
 <template>
   <SearchHeader @search="handleSearch"></SearchHeader>
-  <SearchList :recipes="recipes"></SearchList>
-  <SearchFooter></SearchFooter>
+  <RouterView :recipes="recipes"></RouterView>
 </template>
 
 <script>
-import SearchFooter from './components/SearchFooter.vue';
-import SearchHeader from './components/SearchHeader.vue';
-import SearchList from './components/SearchList.vue';
+import SearchHeader from '@/components/SearchHeader.vue';
 
 export default {
+  name: 'App',
   components: {
-    SearchFooter,
-    SearchHeader,
-    SearchList
+    SearchHeader
   },
   data() {
     return {
@@ -34,6 +30,7 @@ export default {
         const response = await fetch(url);
         const data = await response.json();
         this.recipes = data.results;
+        this.$router.push('/');
       } catch (error) {
         console.error('Error fetching data:', error);
       }

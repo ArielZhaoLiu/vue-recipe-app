@@ -4,10 +4,10 @@
             <li v-for="(item, index) in recipes" :key="item.id">
                 <div class="view">
                     <span class="index">{{ index + 1 }}.</span>
-                    <span class="recipe-title">
+                    <router-link :to="`/recipes/${item.id}`" class="recipe-title">
                         <img :src="item.image" alt="" class="recipe-image">
                         {{ item.title }}
-                    </span>
+                    </router-link>
                 </div>
             </li>
         </ul>
