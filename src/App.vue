@@ -1,5 +1,8 @@
 <template>
-  <SearchHeader @search="handleSearch"></SearchHeader>
+  <SearchHeader 
+    @search="handleSearch"
+    @cuisine-change="handleCuisineChange"
+  ></SearchHeader>
   <RouterView
     :recipes="recipes"
     :current-page="currentPage"
@@ -27,7 +30,8 @@ export default {
       recipes: [],
       currentPage: 1,
       totalResults: 0, 
-      totalPages: 0
+      totalPages: 0,
+      selectedCuisine: ''
     }
   },
   methods: {
@@ -39,11 +43,19 @@ export default {
     handlePageChange(page){
       this.search(page);
     },
+    handleCuisineChange(cuisine){
+      this.selectedCuisine = cuisine;
+      this.search();
+    },
     async search(page = 1) {
       const apiKey = '3c59b22c1b3c427ea238afa32409cf6e';
       const number = 5;
       const offset = (page - 1) * number;
-      const url = `https://api.spoonacular.com/recipes/complexSearch?query=${this.searchTerm}&number=${number}&offset=${offset}&apiKey=${apiKey}`;
+      let url = `https://api.spoonacular.com/recipes/complexSearch?query=${this.searchTerm}&number=${number}&offset=${offset}&apiKey=${apiKey}`;
+
+      if (this.selectedCuisine) {
+        url += `&cuisine=${this.selectedCuisine}`;
+      }
 
       try {
         const response = await fetch(url);
