@@ -39,7 +39,7 @@ export default {
   },
   async created() {
     const recipeId = this.$route.params.id;
-    const apiKey = '3c59b22c1b3c427ea238afa32409cf6e';
+    const apiKey = '283f13aa7bac49a7a91d0aee0ec334f3';
     const url = `https://api.spoonacular.com/recipes/${recipeId}/information?includeNutrition=false&apiKey=${apiKey}`;
 
     try {

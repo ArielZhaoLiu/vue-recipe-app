@@ -48,7 +48,7 @@ export default {
       this.search();
     },
     async search(page = 1) {
-      const apiKey = '3c59b22c1b3c427ea238afa32409cf6e';
+      const apiKey = '283f13aa7bac49a7a91d0aee0ec334f3';
       const number = 5;
       const offset = (page - 1) * number;
       let url = `https://api.spoonacular.com/recipes/complexSearch?query=${this.searchTerm}&number=${number}&offset=${offset}&apiKey=${apiKey}`;
