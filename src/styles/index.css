@@ -23,9 +23,20 @@ body {
     background: #f5f5f5;
     color: #4d4d4d;
     min-width: 230px;
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
     font-weight: 300;
+}
+
+a {
+    color: #4d4d4d;
+    text-decoration: none;  
+    transition: color 0.3s ease;
+}
+
+
+a:hover {
+    color: rgba(175, 47, 47, 0.8);
 }
 
 #app {
@@ -148,6 +159,7 @@ body {
     font-size: 22px;
 }
 
+
 .recipe-image {
     width: 80px;
     height: 60px;
@@ -192,5 +204,115 @@ body {
     cursor: pointer;
 }
 
+
+
+/****** Detail page ******/
+/* Main Container */
+.recipe-detail {
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: #333;
+}
+
+/* Title */
+.recipe-detail h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    padding: 1rem 0 0.6rem 0;
+    font-family: 'Domaine Display',
+            Georgia,
+            Cambria,
+            'Times New Roman',
+            Times,
+            serif;
+    font-size:1.8rem;
+    font-weight: 500;
+}
+
+.recipe-detail .title{
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+/* image */
+.recipe-detail img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 2rem auto;
+    
+}
+
+/* health info */
+.health-info {
+    display: flex;
+    gap: 1rem;
+    background-color: #fef7e0;
+    padding: 0.8rem 1rem;
+    border-left: 4px solid #f4c95d;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+/* ingradient list */
+.recipe-detail ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.recipe-detail li {
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #ddd;
+    font-size: 1rem;
+}
+
+.ingredient-name{
+    width: 320px; 
+    display: inline-block;
+    margin-left: 10px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+/* instructions */
+.recipe-detail [v-html] {
+    line-height: 1.6;
+}
+
+/* loading */
+.recipe-detail .loading {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+    .health-info {
+        flex-direction: column;
+    }
+
+    .recipe-detail {
+        padding: 1rem;
+    }
+}
+
+/* for checked ingredients */
+.crossed {
+    text-decoration: line-through;
+    color: gray; 
+}
+
+.ingredient-name {
+    display: inline-block;
+    width: 320px;
+}
+
+.crossed .ingredient-name,
+.crossed .ingredient-measure {
+    text-decoration: line-through;
+    color: gray; }
 
 

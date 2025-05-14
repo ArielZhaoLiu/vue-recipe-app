@@ -23,7 +23,7 @@ export default {
       await this.search(); 
     },
     async search() {
-      const apiKey = '283f13aa7bac49a7a91d0aee0ec334f3';
+      const apiKey = '3c59b22c1b3c427ea238afa32409cf6e';
       const url = `https://api.spoonacular.com/recipes/complexSearch?query=${this.searchTerm}&number=5&apiKey=${apiKey}`;
 
       try {
