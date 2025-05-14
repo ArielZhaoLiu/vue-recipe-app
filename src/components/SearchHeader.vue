@@ -47,20 +47,21 @@ export default {
 
 <style>
 .filter {
-  margin: 1.25rem 0.8rem;
+  margin: 2rem 0.8rem;
   font-family: 'Helvetica Neue', sans-serif;
+  text-align: center;
 }   
 
 .filter label {
   font-size: 1.125rem;
   margin-right: 0.5rem;
-  color: #a44b4b;
+  color: #5a2d2d;
 }
 
 .filter select {
   padding: 0.3rem 0.3rem;
   font-size: 1rem;
-  border: 1px solid #c17c7c;
+  border: 1px solid #5a2d2d;
   border-radius: 6px;
   background-color: #fff;
   color: #5a2d2d;

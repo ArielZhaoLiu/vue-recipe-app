@@ -172,7 +172,7 @@ a:hover {
 .footer {
     color: #777;
     padding: 10px 55px;
-    height: 30px;
+    height: auto;
     text-align: center;
     border-top: 1px solid #e6e6e6;
 }

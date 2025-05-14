@@ -9,7 +9,7 @@
     :total-pages="totalPages"
     @change-page="handlePageChange"
   ></RouterView>
-  <SearchFooter 
+  <SearchFooter
       :currentPage="currentPage" :totalPages="totalPages" @changePage="handlePageChange"
     ></SearchFooter>
 </template>
