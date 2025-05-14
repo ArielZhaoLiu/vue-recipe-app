@@ -1,9 +1,9 @@
 <template>
     <header>
-        <h1>Recipe Search</h1>
+        <h1>Find a Recipe</h1>
         <input 
             @keyup.enter="search"
-            v-model="searchTerm" placeholder="Enter a food" class="searchFood" />
+            v-model="searchTerm" placeholder="Search for recipes..." class="searchFood" />
         <button @click="search" class="search">Search</button>
     </header>
 </template>
