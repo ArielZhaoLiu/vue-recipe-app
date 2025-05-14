@@ -265,7 +265,9 @@ a:hover {
 .recipe-detail li {
     padding: 0.4rem 0;
     border-bottom: 1px dashed #ddd;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.4px;
 }
 
 .ingredient-name{
@@ -288,16 +290,6 @@ a:hover {
     color: #777;
 }
 
-/* responsive */
-@media (max-width: 600px) {
-    .health-info {
-        flex-direction: column;
-    }
-
-    .recipe-detail {
-        padding: 1rem;
-    }
-}
 
 /* for checked ingredients */
 .crossed {

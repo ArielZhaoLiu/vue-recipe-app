@@ -1,15 +1,18 @@
 <template>
   <SearchHeader @search="handleSearch"></SearchHeader>
   <RouterView :recipes="recipes"></RouterView>
+  <SearchFooter></SearchFooter>
 </template>
 
 <script>
 import SearchHeader from '@/components/SearchHeader.vue';
+import SearchFooter from '@/components/SearchFooter.vue';
 
 export default {
   name: 'App',
   components: {
-    SearchHeader
+    SearchHeader,
+    SearchFooter
   },
   data() {
     return {
